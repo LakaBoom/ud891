@@ -21,11 +21,11 @@
     this.el.addEventListener('click', this.toggle.bind(this));
 
     this.el.setAttribute ('role','checkbox');
-    if(this.el.hasAttribute('checked'){
+    if(this.el.hasAttribute('checked')){
       this.el.setAttribute('aria-checked','true');
     }else{
       this.el.setAttribute('aria-checked','false');
-    })
+    }
   }
 
   Checkbox.prototype.handleKeyDown = function(e) {
@@ -51,6 +51,7 @@
   };
 
   var checkboxes = slice(document.querySelectorAll('.checkbox'));
+  console.log(`checkbox has ${checkboxes}`);
   for (var checkbox of checkboxes)
     checkbox.logic = new Checkbox(checkbox);
 
